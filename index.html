@@ -43,8 +43,16 @@
                                 <ul class="list-group" v-for="(task, index) in todolist">
                                     <!-- proprietà di todolist -->
                                     <li class="list-group-item" :class="task.done ? 'text-decoration-line-through list-group-item-success' : 'list-group-item-warning'">
-                                        {{ task.text }}
-                                        
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                {{ task.text }}
+                                            </div>
+                                            <div>
+                                                <button type="button" class="btn btn-danger" @click="deleteTask(index)">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
