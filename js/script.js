@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return{
-            flag: false,
+            text: null,
             todolist: [
                 {
                     text: 'scrivere una poesia',
@@ -24,6 +24,15 @@ createApp({
     methods: {
         deleteTask(index) {
             this.todolist.splice(index, 1);
+        },
+
+        addTask() {
+            let object = {
+                text: this.text,
+                done: false
+            }
+            this.todolist.push(object);
+            this.text = null;
         }
     }
 }).mount('#app');
