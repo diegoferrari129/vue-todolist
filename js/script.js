@@ -3,24 +3,25 @@ const { createApp } = Vue;
 createApp({
     data() {
         return{
+            flag: false,
             todolist: [
                 {
                     text: 'scrivere una poesia',
-                    done: '',
+                    done: false
                 }, {
                     text: 'accomodarsi sull\'amaca',
-                    done: '',
+                    done: true
                 }, {
                     text: 'leggere un libro',
-                    done: '',
+                    done: true
                 }, {
                     text: 'rinfrescarmi con 7 calici di vino',
-                    done: '',
+                    done: false
                 }
             ]
         }
     },
     methods: {
-
+        
     }
 }).mount('#app');

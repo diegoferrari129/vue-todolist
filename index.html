@@ -40,10 +40,11 @@
                             <div class="offset-2 col-8">
                                 <!-- content -->
                                 <!-- ciclo for di todolist -->
-                                <ul class="list-group" v-for="(item) in todolist">
+                                <ul class="list-group" v-for="(task, index) in todolist">
                                     <!-- proprietà di todolist -->
-                                    <li class="list-group-item">
-                                        {{ item.text }}
+                                    <li class="list-group-item" :class="task.done ? 'text-decoration-line-through list-group-item-success' : 'list-group-item-warning'">
+                                        {{ task.text }}
+                                        
                                     </li>
                                 </ul>
                             </div>
